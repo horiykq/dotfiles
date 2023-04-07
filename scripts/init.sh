@@ -33,17 +33,37 @@ NODE_BUILD="$NODENV/plugins/node-build"
 RUBY_BUILD="$RBENV/plugins/ruby-build"
 
 echo ""
-echo "=== 1. $WORKSPACE ディレクトリの作成 ==="
+echo "=== 1. Homebrew のインストール ==="
+echo ""
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+echo ""
+echo "=== 1. END Homebrew のインストール ==="
+echo ""
+
+echo ""
+echo "=== 2. Ansible のインストール"
+echo ""
+
+brew install ansible
+
+echo ""
+echo "=== 2. END Ansible のインストール"
+echo ""
+
+echo ""
+echo "=== 3. $WORKSPACE ディレクトリの作成 ==="
 echo ""
 
 mkdir -p "$WORKSPACE"
 
 echo ""
-echo "=== 1. END $WORKSPACE ディレクトリの作成 ==="
+echo "=== 3. END $WORKSPACE ディレクトリの作成 ==="
 echo ""
 
 echo ""
-echo "=== 2. dotfiles リポジトリのクローン ==="
+echo "=== 4. dotfiles リポジトリのクローン ==="
 echo ""
 
 if [ -d "$DOTFILES" ]; then
@@ -53,25 +73,5 @@ else
 fi
 
 echo ""
-echo "=== 2. END dotfiles リポジトリのクローン ==="
-echo ""
-
-echo ""
-echo "=== 3. Homebrew のインストール ==="
-echo ""
-
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-echo ""
-echo "=== 3. END Homebrew のインストール ==="
-echo ""
-
-echo ""
-echo "=== 4. Ansible のインストール"
-echo ""
-
-brew install ansible
-
-echo ""
-echo "=== 4. END Ansible のインストール"
+echo "=== 4. END dotfiles リポジトリのクローン ==="
 echo ""
