@@ -8,8 +8,19 @@
     - name: Install packages via Homebrew
       community.general.homebrew:
         name:
-          - neovim
+          - zip
+          - unzip
+          - jq
+          - tree
           - shellcheck
+          - neovim
+        path: "{{ macos_homebrew_path }}"
+        state: latest
+
+    - name: Install Homebrew Casks
+      community.general.homebrew_cask:
+        name:
+          - google-chrome
         path: "{{ macos_homebrew_path }}"
         state: latest
 
