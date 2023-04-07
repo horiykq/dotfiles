@@ -1,0 +1,17 @@
+---
+- block:
+    - name: Update Homebrew
+      community.general.homebrew:
+        update_homebrew: yes
+
+    - name: Install packages via Homebrew
+      community.general.homebrew:
+        name:
+          - neovim
+        state: latest
+
+    - name: Clone pyenv
+      become: yes
+      git:
+        repo: https://github.com/pyenv/pyenv.git
+        dest: "{{ macos_pyenv_root }}"

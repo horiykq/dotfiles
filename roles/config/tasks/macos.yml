@@ -5,3 +5,4 @@
     template:
       src: zsh/.zshrc
       dest: "{{ macos_home_path }}/.zshrc"
+      owner: "{{ macos_user }}"

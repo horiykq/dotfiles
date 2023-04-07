@@ -1,5 +1,6 @@
 .PHONY: init
-init: homebrew/init ansible/init
+init:
+	sh scripts/init.sh
 
 .PHONY: homebrew/init
 homebrew/init:
