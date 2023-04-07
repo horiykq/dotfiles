@@ -5,9 +5,7 @@ init:
 .PHONY: homebrew/init
 homebrew/init:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 	cat templates/zsh/.zprofile > ~/.zprofile
-	exec "$SHELL"
 
 .PHONY: ansible/init
 ansible/init:
