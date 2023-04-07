@@ -2,12 +2,15 @@
 - block:
     - name: Update Homebrew
       community.general.homebrew:
+        path: "{{ macos_homebrew_path }}"
         update_homebrew: yes
 
     - name: Install packages via Homebrew
       community.general.homebrew:
         name:
           - neovim
+          - shellcheck
+        path: "{{ macos_homebrew_path }}"
         state: latest
 
     - name: Clone pyenv
@@ -15,3 +18,33 @@
       git:
         repo: https://github.com/pyenv/pyenv.git
         dest: "{{ macos_pyenv_root }}"
+
+    - name: Clone nodenv
+      become: yes
+      git:
+        repo: https://github.com/nodenv/nodenv.git
+        dest: "{{ macos_nodenv_root }}"
+
+    - name: Clone node-build
+      become: yes
+      git:
+        repo: https://github.com/nodenv/node-build.git
+        dest: "{{ macos_nodenv_root }}/plugins/node-build"
+
+    - name: Clone goenv
+      become: yes
+      git:
+        repo: https://github.com/syndbg/goenv.git
+        dest: "{{ macos_goenv_root }}"
+
+    - name: Clone rbenv
+      become: yes
+      git:
+        repo: https://github.com/rbenv/rbenv.git
+        dest: "{{ macos_rbenv_root }}"
+
+    - name: Clone ruby-build
+      become: yes
+      git:
+        repo: https://github.com/rbenv/ruby-build.git
+        dest: "{{ macos_rbenv_root }}/plugins/ruby-build"

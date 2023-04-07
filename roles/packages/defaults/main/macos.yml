@@ -1,6 +1,7 @@
 ---
 macos_user: "{{ ansible_facts['env']['USER'] }}"
 macos_home_path: "{{ ansible_facts['env']['HOME'] }}"
+macos_homebrew_path: "/opt/homebrew/bin"
 
 macos_pyenv_root: "{{ macos_home_path }}/.pyenv"
 macos_nodenv_root: "{{ macos_home_path }}/.nodenv"
