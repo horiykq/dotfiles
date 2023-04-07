@@ -1,0 +1,2 @@
+---
+macos_home_path: "{{ ansible_facts['env']['HOME'] }}"

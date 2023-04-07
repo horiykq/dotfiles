@@ -1,0 +1,7 @@
+---
+- block:
+  - name: "Create {{ macos_home_path }}/.zshrc"
+    become: yes
+    template:
+      src: zsh/.zshrc
+      dest: "{{ macos_home_path }}/.zshrc"

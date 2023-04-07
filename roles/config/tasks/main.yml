@@ -1,0 +1,4 @@
+---
+- name: Copy config for macOS
+  import_tasks: macos.yml
+  when: ansible_os_family == "Darwin"
