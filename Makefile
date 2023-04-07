@@ -15,3 +15,11 @@ ansible/init:
 .PHONY: ansible/setup
 ansible/setup:
 	ansible-playbook setup.yml -vv --ask-become-pass
+
+.PHONY: ansible/lint
+ansible/lint:
+	ansible-playbook setup.yml -vvvv --syntax-check
+
+.PHONY: ansible/test
+ansible/test:
+	ansible-playbook setup.yml -vv --ask-become-pass --check
