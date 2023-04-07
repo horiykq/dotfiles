@@ -31,3 +31,9 @@
    ```
    make ansible/setup
    ```
+
+### Casks
+
+- google-chrome
+- (warp)
+- (wezterm)
