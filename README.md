@@ -23,7 +23,7 @@
 4. Install Ansible
 
    ```
-    make ansible/init
+   make ansible/init
    ```
 
 5. Setup
@@ -35,5 +35,6 @@
 ### Casks
 
 - google-chrome
+- docker
 - (warp)
 - (wezterm)
