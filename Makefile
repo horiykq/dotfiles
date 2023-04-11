@@ -22,3 +22,7 @@ ansible/lint:
 .PHONY: ansible/test
 ansible/test:
 	ansible-playbook setup.yml -vv --ask-become-pass --check
+
+.PHONY: rustup
+rustup:
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

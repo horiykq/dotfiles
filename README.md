@@ -36,5 +36,4 @@
 
 - google-chrome
 - docker
-- (warp)
-- (wezterm)
+- alacritty
