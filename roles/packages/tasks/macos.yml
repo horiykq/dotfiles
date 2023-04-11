@@ -38,16 +38,8 @@
     - name: "Set Python {{ macos_python_version }} to global"
       shell: "pyenv global {{ macos_python_version }}"
 
-    - name: Update pip3
-      shell: pip3 install --upgrade pip
-
-    - name: Install packages via pip3
-      shell: |
-        pip3 install \
-          autopep8 \
-          fastapi[all] \
-          pylint \
-          requests
+    - name: Install Poetry
+      shell: curl -sSL https://install.python-poetry.org | python3 -
 
     - name: Clone nodenv
       become: yes
