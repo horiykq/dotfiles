@@ -16,3 +16,6 @@ export PATH="$PATH:$GOPATH/bin"
 
 # rbenv
 eval "$(~/.rbenv/bin/rbenv init - zsh)"
+
+# poetry
+export PATH="$HOME/.local/bin:$PATH"
