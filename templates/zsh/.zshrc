@@ -19,3 +19,6 @@ eval "$(~/.rbenv/bin/rbenv init - zsh)"
 
 # poetry
 export PATH="$HOME/.local/bin:$PATH"
+
+# openjdk@11
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"

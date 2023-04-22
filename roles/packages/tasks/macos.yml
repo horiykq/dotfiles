@@ -13,6 +13,7 @@
           - jq
           - tree
           - shellcheck
+          - openjdk@11
           - neovim
           - tmux
         path: "{{ macos_homebrew_path }}"
