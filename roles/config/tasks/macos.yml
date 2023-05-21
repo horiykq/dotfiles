@@ -1,11 +1,5 @@
 ---
 - block:
-    - name: "Create {{ macos_home_path }}/.zshrc"
-      template:
-        src: zsh/.zshrc
-        dest: "{{ macos_home_path }}/.zshrc"
-        owner: "{{ macos_user }}"
-
     - name: "Create {{ macos_home_path }}/.gitconfig"
       template:
         src: git/.gitconfig
