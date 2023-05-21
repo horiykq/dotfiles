@@ -20,5 +20,9 @@ eval "$(~/.rbenv/bin/rbenv init - zsh)"
 # poetry
 export PATH="$HOME/.local/bin:$PATH"
 
+# deno
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 # openjdk@11
 export PATH="/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home:$PATH"

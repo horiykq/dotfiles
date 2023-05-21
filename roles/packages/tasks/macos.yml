@@ -74,6 +74,9 @@
     - name: Install yarn
       shell: npm install -g yarn
 
+    - name: Install deno
+      shell: curl -fsSL https://deno.land/x/install/install.sh | sh
+
     - name: Clone goenv
       become: yes
       become_user: "{{ macos_user }}"
