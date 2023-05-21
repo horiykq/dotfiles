@@ -21,4 +21,4 @@ eval "$(~/.rbenv/bin/rbenv init - zsh)"
 export PATH="$HOME/.local/bin:$PATH"
 
 # openjdk@11
-export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH="/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home:$PATH"

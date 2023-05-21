@@ -11,6 +11,8 @@
           - zip
           - unzip
           - jq
+          - fq
+          - gh
           - tree
           - shellcheck
           - openjdk@11
