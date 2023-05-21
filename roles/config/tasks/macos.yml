@@ -1,55 +1,55 @@
 ---
 - block:
-  - name: "Create {{ macos_home_path }}/.zshrc"
-    template:
-      src: zsh/.zshrc
-      dest: "{{ macos_home_path }}/.zshrc"
-      owner: "{{ macos_user }}"
+    - name: "Create {{ macos_home_path }}/.zshrc"
+      template:
+        src: zsh/.zshrc
+        dest: "{{ macos_home_path }}/.zshrc"
+        owner: "{{ macos_user }}"
 
-  - name: "Create {{ macos_home_path }}/.gitconfig"
-    template:
-      src: git/.gitconfig
-      dest: "{{ macos_home_path }}/.gitconfig"
-      owner: "{{ macos_user }}"
+    - name: "Create {{ macos_home_path }}/.gitconfig"
+      template:
+        src: git/.gitconfig
+        dest: "{{ macos_home_path }}/.gitconfig"
+        owner: "{{ macos_user }}"
 
-  - name: "Create {{ macos_home_path }}/.config"
-    file:
-      path: "{{ macos_home_path }}/.config"
-      state: directory
-      owner: "{{ macos_user }}"
+    - name: "Create {{ macos_home_path }}/.config"
+      file:
+        path: "{{ macos_home_path }}/.config"
+        state: directory
+        owner: "{{ macos_user }}"
 
-  - name: "Create {{ macos_home_path }}/.config/git"
-    file:
-      path: "{{ macos_home_path }}/.config/git"
-      state: directory
-      owner: "{{ macos_user }}"
+    - name: "Create {{ macos_home_path }}/.config/git"
+      file:
+        path: "{{ macos_home_path }}/.config/git"
+        state: directory
+        owner: "{{ macos_user }}"
 
-  - name: "Create {{ macos_home_path }}/.config/git/ignore"
-    template:
-      src: .config/git/ignore
-      dest: "{{ macos_home_path }}/.config/git/ignore"
-      owner: "{{ macos_user }}"
+    - name: "Create {{ macos_home_path }}/.config/git/ignore"
+      template:
+        src: .config/git/ignore
+        dest: "{{ macos_home_path }}/.config/git/ignore"
+        owner: "{{ macos_user }}"
 
-  - name: "Create {{ macos_home_path }}/.config/nvim"
-    file:
-      path: "{{ macos_home_path }}/.config/nvim"
-      state: directory
-      owner: "{{ macos_user }}"
+    - name: "Create {{ macos_home_path }}/.config/nvim"
+      file:
+        path: "{{ macos_home_path }}/.config/nvim"
+        state: directory
+        owner: "{{ macos_user }}"
 
-  - name: "Create {{ macos_home_path }}/.config/nvim/init.lua"
-    template:
-      src: .config/nvim/init.lua
-      dest: "{{ macos_home_path }}/.config/nvim/init.lua"
-      owner: "{{ macos_user }}"
+    - name: "Create {{ macos_home_path }}/.config/nvim/init.lua"
+      template:
+        src: .config/nvim/init.lua
+        dest: "{{ macos_home_path }}/.config/nvim/init.lua"
+        owner: "{{ macos_user }}"
 
-  - name: "Create {{ macos_home_path }}/.config/alacritty"
-    file:
-      path: "{{ macos_home_path }}/.config/alacritty"
-      state: directory
-      owner: "{{ macos_user }}"
+    - name: "Create {{ macos_home_path }}/.config/alacritty"
+      file:
+        path: "{{ macos_home_path }}/.config/alacritty"
+        state: directory
+        owner: "{{ macos_user }}"
 
-  - name: "Create {{ macos_home_path }}/.config/alacritty/alacritty.yml"
-    template:
-      src: .config/alacritty/alacritty.yml
-      dest: "{{ macos_home_path }}/.config/alacritty/alacritty.yml"
-      owner: "{{ macos_user }}"
+    - name: "Create {{ macos_home_path }}/.config/alacritty/alacritty.yml"
+      template:
+        src: .config/alacritty/alacritty.yml
+        dest: "{{ macos_home_path }}/.config/alacritty/alacritty.yml"
+        owner: "{{ macos_user }}"
