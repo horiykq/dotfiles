@@ -21,6 +21,14 @@
         path: "{{ macos_homebrew_path }}"
         state: latest
 
+    - name: Clone AstroNvim
+      become: yes
+      become_user: "{{ macos_user }}"
+      git:
+        repo: https://github.com/AstroNvim/AstroNvim
+        dest: "{{ macos_home_path }}/.config/nvim"
+        depth: 1
+
     - name: Clone pyenv
       become: yes
       become_user: "{{ macos_user }}"

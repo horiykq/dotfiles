@@ -24,18 +24,6 @@
         dest: "{{ macos_home_path }}/.config/git/ignore"
         owner: "{{ macos_user }}"
 
-    - name: "Create {{ macos_home_path }}/.config/nvim"
-      file:
-        path: "{{ macos_home_path }}/.config/nvim"
-        state: directory
-        owner: "{{ macos_user }}"
-
-    - name: "Create {{ macos_home_path }}/.config/nvim/init.lua"
-      template:
-        src: .config/nvim/init.lua
-        dest: "{{ macos_home_path }}/.config/nvim/init.lua"
-        owner: "{{ macos_user }}"
-
     - name: "Create {{ macos_home_path }}/.config/alacritty"
       file:
         path: "{{ macos_home_path }}/.config/alacritty"
