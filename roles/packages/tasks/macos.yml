@@ -49,9 +49,6 @@
     - name: "Set Python {{ macos_python_version }} to global"
       shell: "pyenv global {{ macos_python_version }}"
 
-    - name: Install Poetry
-      shell: curl -sSL https://install.python-poetry.org | python3 -
-
     - name: Clone nodenv
       become: yes
       become_user: "{{ macos_user }}"
@@ -79,9 +76,6 @@
     - name: "Set Node.js {{ macos_node_version }} to global"
       shell: "nodenv global {{ macos_node_version }}"
 
-    - name: Install yarn
-      shell: npm install -g yarn
-
     - name: Install deno
       shell: curl -fsSL https://deno.land/x/install/install.sh | sh
 
@@ -104,37 +98,3 @@
 
     - name: "Set Go {{ macos_go_version }} to global"
       shell: "goenv global {{ macos_go_version }}"
-
-    - name: Clone rbenv
-      become: yes
-      become_user: "{{ macos_user }}"
-      git:
-        repo: https://github.com/rbenv/rbenv.git
-        dest: "{{ macos_rbenv_root }}"
-
-    - name: Clone ruby-build
-      become: yes
-      become_user: "{{ macos_user }}"
-      git:
-        repo: https://github.com/rbenv/ruby-build.git
-        dest: "{{ macos_rbenv_root }}/plugins/ruby-build"
-
-    - name: Check installed Ruby versions
-      shell: "rbenv versions | grep {{ macos_ruby_version }}"
-      register: ruby_check_install
-      changed_when: False
-      ignore_errors: yes
-
-    - name: "Install Ruby {{ macos_ruby_version }}"
-      shell: "rbenv install {{ macos_ruby_version }}"
-      when: ruby_check_install is failed
-
-    - name: "Set Ruby {{ macos_ruby_version }} to global"
-      shell: "rbenv global {{ macos_ruby_version }}"
-
-    - name: Install gems
-      shell: |
-        gem install rails -v {{ macos_rails_version }}
-        gem install \
-          bundler \
-          solargraph
