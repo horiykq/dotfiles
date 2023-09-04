@@ -38,9 +38,22 @@
    make macos/vscode/init
    ```
 
+## Casks
 
-### Casks
+### Google Chrome
 
-- google-chrome
-- docker
-- alacritty
+   ```
+   brew install --cask google-chrome
+   ```
+
+### Docker
+
+   ```
+   brew install --cask docker
+   ```
+
+### Alacritty
+
+   ```
+   brew install --cask alacritty
+   ```
