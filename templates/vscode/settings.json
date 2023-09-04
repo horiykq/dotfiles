@@ -16,7 +16,7 @@
     "enable": true
   },
   "eslint.format.enable": true,
-  "go.gocodeAutoBuild": true,
+  "go.useLanguageServer": true,
   "go.toolsManagement.autoUpdate": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "prettier.trailingComma": "all",

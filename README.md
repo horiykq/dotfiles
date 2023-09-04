@@ -11,13 +11,13 @@
 2. Install Homebrew
 
    ```
-   make homebrew/init
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 
-3. Run below command so that PATH changes take effect
+3. Run below command and restart your terminal so that PATH changes take effect
 
    ```
-   exec "$SHELL"
+   make zsh/init
    ```
 
 4. Install Ansible
@@ -31,6 +31,13 @@
    ```
    make ansible/setup
    ```
+
+6. Copy settings.json for VSCode (Optional)
+
+   ```
+   make macos/vscode/init
+   ```
+
 
 ### Casks
 

@@ -1,10 +1,11 @@
+USER := $(shell whoami)
+
 .PHONY: init
 init:
 	sh scripts/init.sh
 
-.PHONY: homebrew/init
-homebrew/init:
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+.PHONY: zsh/init
+zsh/init:
 	cat templates/zsh/.zshrc > ~/.zshrc
 	cat templates/zsh/.zprofile > ~/.zprofile
 
@@ -15,6 +16,10 @@ ansible/init:
 .PHONY: ansible/setup
 ansible/setup:
 	ansible-playbook setup.yml -vv --ask-become-pass
+
+.PHONY: macos/vscode/init
+macos/vscode/init:
+	cat templates/vscode/settings.json > /Users/$(USER)/Library/Application\ Support/Code/User/settings.json
 
 .PHONY: ansible/lint
 ansible/lint:
