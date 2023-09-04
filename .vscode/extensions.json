@@ -32,12 +32,10 @@
     "ms-python.python",
     "ms-python.vscode-pylance",
     "ms-vscode.cpptools",
-    "ms-vscode-remote.remote-wsl",
     "njqdev.vscode-python-typehint",
     "octref.vetur",
     "prisma.prisma",
     "rebornix.ruby",
-    "rust-lang.rust",
     "sdras.vue-vscode-snippets",
     "serayuzgur.crates",
     "svelte.svelte-vscode",
@@ -46,6 +44,15 @@
     "vscode-icons-team.vscode-icons",
     "wingrunr21.vscode-ruby",
     "xabikos.javascriptsnippets",
-    "xabikos.reactsnippets"
+    "xabikos.reactsnippets",
+    "ms-vscode.makefile-tools",
+    "ms-python.autopep8",
+    "denoland.vscode-deno",
+    "github.copilot",
+    "ms-vsliveshare.vsliveshare"
+  ],
+  "unwantedRecommendations": [
+    "batisteo.vscode-django",
+    "rust-lang.rust"
   ]
 }
