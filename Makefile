@@ -30,7 +30,7 @@ ansible/check:
 	ansible-playbook setup.yml -vv --ask-become-pass --check
 
 .PHONY: test
-test: init ansible/init
+test: init zsh/init ansible/init ansible/setup
 
 .PHONY: rustup
 rustup:
