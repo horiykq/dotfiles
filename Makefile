@@ -26,14 +26,14 @@ ansible/check:
 	ansible-playbook setup.yml -vv --ask-become-pass --check
 
 .PHONY: test/init
-test: init zsh/init ansible/init
+test/init: init zsh/init ansible/init
 
 .PHONY: ansible/test
 ansible/test:
 	ansible-playbook setup.yml -vvv --ask-become-pass
 
 .PHONY: rustup/init
-rustup:
+rustup/init:
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 .PHONY: cask/chrome/install
