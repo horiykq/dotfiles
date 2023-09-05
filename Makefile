@@ -25,9 +25,12 @@ macos/vscode/init:
 ansible/lint:
 	ansible-playbook setup.yml -vvvv --syntax-check
 
-.PHONY: ansible/test
-ansible/test:
+.PHONY: ansible/check
+ansible/check:
 	ansible-playbook setup.yml -vv --ask-become-pass --check
+
+.PHONY: test
+test: init ansible/init
 
 .PHONY: rustup
 rustup:
