@@ -31,29 +31,3 @@
    ```
    make ansible/setup
    ```
-
-6. Copy settings.json for VSCode (Optional)
-
-   ```
-   make macos/vscode/init
-   ```
-
-## Casks
-
-### Google Chrome
-
-   ```
-   brew install --cask google-chrome
-   ```
-
-### Docker
-
-   ```
-   brew install --cask docker
-   ```
-
-### Alacritty
-
-   ```
-   brew install --cask alacritty
-   ```
