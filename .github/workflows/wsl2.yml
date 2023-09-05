@@ -1,4 +1,4 @@
-name: CI
+name: WSL2
 
 on:
   push:
@@ -12,17 +12,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: make ansible/lint
 
-  test:
-    runs-on: macos-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - run: make test/init
-      - run: |
-          source ~/.zshrc
-          source ~/.zprofile
-        shell: zsh {0}
-      - run: make ansible/test
+  # いつかWSL2向けにplaybookを書いたらここでテストを回す
 
   check:
     runs-on: ubuntu-latest

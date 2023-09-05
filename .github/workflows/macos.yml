@@ -1,0 +1,34 @@
+name: macOS
+
+on:
+  push:
+    workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: make ansible/lint
+
+  test:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: make test/init
+      - run: |
+          source ~/.zshrc
+          source ~/.zprofile
+        shell: zsh {0}
+      - run: |
+          make ansible/test
+        shell: zsh {0}
+
+  check:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: make ansible/check
