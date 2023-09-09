@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: make ansible/lint
+      - run: make ansible/init ansible/lint
 
   test:
     runs-on: macos-latest
@@ -21,8 +21,6 @@ jobs:
       - run: |
           source ~/.zshrc
           source ~/.zprofile
-        shell: zsh {0}
-      - run: |
           make ansible/test
         shell: zsh {0}
 
@@ -31,4 +29,4 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: make ansible/check
+      - run: make ansible/init ansible/check
