@@ -17,8 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: make test/init
-      - run: |
+      - run: make init zsh/init ansible/init
+      - name: test
+        run: |
           source ~/.zshrc
           source ~/.zprofile
           make ansible/test

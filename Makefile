@@ -25,9 +25,6 @@ ansible/lint:
 ansible/check:
 	ansible-playbook setup.yml -vv --ask-become-pass --check
 
-.PHONY: test/init
-test/init: init zsh/init ansible/init
-
 .PHONY: ansible/test
 ansible/test:
 	ansible-playbook setup.yml -vvv --ask-become-pass
