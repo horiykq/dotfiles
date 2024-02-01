@@ -6,11 +6,7 @@ macos_homebrew_path: "/opt/homebrew/bin"
 macos_pyenv_root: "{{ macos_home_path }}/.pyenv"
 macos_nodenv_root: "{{ macos_home_path }}/.nodenv"
 macos_goenv_root: "{{ macos_home_path }}/.goenv"
-macos_rbenv_root: "{{ macos_home_path }}/.rbenv"
 
 macos_python_version: "3.11.2"
 macos_node_version: "18.15.0"
 macos_go_version: "1.20.2"
-macos_ruby_version: "3.1.4"
-
-macos_rails_version: "7.0.7"
