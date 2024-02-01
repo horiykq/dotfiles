@@ -49,7 +49,8 @@
     "ms-python.autopep8",
     "denoland.vscode-deno",
     "github.copilot",
-    "ms-vsliveshare.vsliveshare"
+    "ms-vsliveshare.vsliveshare",
+    "editorconfig.editorconfig"
   ],
   "unwantedRecommendations": [
     "batisteo.vscode-django",
