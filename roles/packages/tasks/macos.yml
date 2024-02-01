@@ -18,6 +18,8 @@
           - openjdk@11
           - neovim
           - tmux
+          - wget
+          - grep
         path: "{{ macos_homebrew_path }}"
         state: latest
 
