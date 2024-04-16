@@ -8,5 +8,5 @@ macos_nodenv_root: "{{ macos_home_path }}/.nodenv"
 macos_goenv_root: "{{ macos_home_path }}/.goenv"
 
 macos_python_version: "3.11.2"
-macos_node_version: "18.15.0"
-macos_go_version: "1.20.2"
+macos_node_version: "20.10.0"
+macos_go_version: "1.21.6"
