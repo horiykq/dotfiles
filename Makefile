@@ -45,6 +45,10 @@ cask/docker/install:
 cask/alacritty/install:
 	brew install --cask alacritty
 
+.PHONY: vscode/list-extensions
+vscode/list-extensions:
+	code --list-extensions
+
 .PHONY: macos/vscode/init
 macos/vscode/init:
 	cat templates/vscode/settings.json > /Users/$(USER)/Library/Application\ Support/Code/User/settings.json
